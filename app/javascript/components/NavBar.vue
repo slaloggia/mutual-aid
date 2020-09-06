@@ -17,6 +17,7 @@
         <FeedbackButton action="software_feedbacks/new">Feedback</FeedbackButton>
       </b-navbar-item>
       <b-navbar-item href="/contributions">Contributions</b-navbar-item>
+      <b-navbar-item href="/my_contributions">My Contributions</b-navbar-item>
       <b-navbar-item href="/matches">Matches</b-navbar-item>
       <b-navbar-item href="/admin">Admin</b-navbar-item>
       <b-navbar-item tag="div">

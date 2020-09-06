@@ -46,6 +46,16 @@ class ContributionsController < ApplicationController
     end
   end
 
+  def user_contributions
+    @filter_types = FilterTypeBlueprint.render([ContributionType, Category, ServiceArea, UrgencyLevel, ContactMethod])
+    filter = BrowseFilter.new(filter_params, self)
+    @contributions = ContributionBlueprint.render(filter.contributions, **filter.options)
+    respond_to do |format|
+      format.html
+      format.json { render inline: @contributions }
+    end
+  end
+
   private
 
   def filter_params

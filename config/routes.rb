@@ -34,6 +34,7 @@ Rails.application.routes.draw do
       post "/triage", to: "contributions#triage_update"
     end
   end
+  get "/my_contributions", to: "contributions#user_contributions", as: "my_contributions"
   resources :custom_form_questions
   resources :donations
   resources :feedbacks
